@@ -1,0 +1,12 @@
+-{vIncl}=
+-I libs/
+> 
+-{vFlag}=""
+>
+-c &lpng1637/ -o obj/
+-{vIncl} -{vFlag}
+>
+-o obj/ -#To out/App.* -lz
+>
+-#Run
+>
