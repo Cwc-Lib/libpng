@@ -17,7 +17,7 @@
 >
 ;Build Lib
 -o obj/lpng/ -#To Lib/libpng.a 	|
--o obj/lpng/ -#To Lib/libz.a 	|
+-o obj/zlib/ -#To Lib/libz.a 	|
 >
 ;build Example
 -c {pLibpng}pngtest.c -o obj/pngtest.o
