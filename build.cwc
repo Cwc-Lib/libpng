@@ -1,12 +1,33 @@
 -{vIncl}=
 -I libs/
 > 
+-{pLibpng}=lpng1637/
+>
 -{vFlag}=""
 >
--c &lpng1637/ -o obj/
+;build Lib png
+-c  &{pLibpng}
+	!{pLibpng}pngtest.c
+	-o obj/lpng/
 -{vIncl} -{vFlag}
 >
--o obj/ -#To out/App.* -lz
+;build ZLib
+-c &zlib-1.2.11/ -o obj/zlib/
+-{vIncl} -{vFlag}
 >
+;Build Lib
+-o obj/lpng/ -#To Lib/libpng.a 	|
+-o obj/lpng/ -#To Lib/libz.a 	|
+>
+;build Example
+-c {pLibpng}pngtest.c -o obj/pngtest.o
+>
+;Copy Rc
+-#Copy {pLibpng}pngtest.png _out/
+>
+;Ling Example
+-o obj/ -#To _out/App.* 
+>
+;Run Example
 -#Run
 >
