@@ -1,9 +1,8 @@
--{vIncl}=
--I libs/
+-{vIncl}=-I libs/
 > 
 -{pLibpng}=lpng1637/
 >
--{vFlag}=
+-{vFlag}=""
 ;-DPNG_DEBUG=3
 >
 ;build Lib png
